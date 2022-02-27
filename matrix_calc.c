@@ -5,7 +5,7 @@
 void gotoxy(int x, int y);
 
 int main() {
-    int arr[3][3], deter, i, j;
+    int arr[3][3], deter, i, j, x=1;
     printf("Enter elements of matrix[3x3] :\n");
     for(i=0; i<3; i++){
         for(j=0;j<3; j++){
@@ -14,6 +14,8 @@ int main() {
     }
     for(i=0; i<3; i++){
         for(j=0; j<3; j++){
+            printf("Enter %d element: ", x);
+            scanf("%d", &arr[i][j]);
             system("cls");
             gotoxy(6, 2);
             printf("__");
@@ -70,8 +72,7 @@ int main() {
             gotoxy(12, 6);
             printf("--");
             gotoxy(4, 8);
-            printf("Enter %d%d element: ", i+1, j+1);
-            scanf("%d", &arr[i][j]);
+            x++;
         }
     }
     getch();
